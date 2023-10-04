@@ -1,0 +1,104 @@
+{
+	"textures": [
+		{
+			"image": "sprite_sheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 463,
+				"h": 1540
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "character-climb__01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 260,
+						"h": 533
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 260,
+						"h": 533
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 260,
+						"h": 533
+					}
+				},
+				{
+					"filename": "character-climb__02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 278,
+						"h": 521
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 278,
+						"h": 521
+					},
+					"frame": {
+						"x": 1,
+						"y": 536,
+						"w": 278,
+						"h": 521
+					}
+				},
+				{
+					"filename": "character-idle__01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 199,
+						"h": 500
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 199,
+						"h": 500
+					},
+					"frame": {
+						"x": 263,
+						"y": 1,
+						"w": 199,
+						"h": 500
+					}
+				},
+				{
+					"filename": "character-fall__01.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 352,
+						"h": 480
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 352,
+						"h": 480
+					},
+					"frame": {
+						"x": 1,
+						"y": 1059,
+						"w": 352,
+						"h": 480
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:d6061cd0279ff085d43d578ab2422ed3:224e7d0eaf75e77a0f53127830596fe4:ef404d52113e65415d31df8280c10332$"
+	}
+}

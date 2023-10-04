@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hell Space Ltd. LD54</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .game {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            display: flex;
+            align-items: center;
+            background-image: url("images/splash-background.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .modal-body {
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .description {
+            color: white;
+            padding: 15px 50px;
+            text-align: center;
+            font-weight: bolder;
+            margin: 25px 200px;
+            background-color: #000000ab;
+        }
+
+        .playbutton {
+            width: 100px;
+            height: 100px;
+        }
+
+        .logo {
+            border-radius: 50%;
+            width: 450px;
+            height: 450px;
+        }
+
+        .modal-footer {
+            border: none !important;
+        }
+
+
+
+
+
+
+
+
+
+        /* Win Modal Start ------------------------------------------------------ */
+        .modal-content-win {
+            height:100vh;
+            display: flex;
+            align-items: center;
+            background-image: url("images/defeated-elon.jpg");
+            background-size: cover;
+            background-position: top;
+        }
+
+        .modal-header-win {
+            border: none;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 15%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .modal-header-win h1 {
+            display: block;
+            margin: 0 auto;
+            font-size: 110px;
+            font-family: monospace;
+            font-weight: 700;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation:
+                    typing 3.5s steps(40, end),
+                    blink-caret .75s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 40% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        .btn-close.win {
+            position: absolute;
+            top: -120px;
+            right: 20px;
+            font-size: 50px;
+        }
+
+        .modal-body-win {
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        .modal-footer-win {
+            border: none !important;
+        }
+
+
+
+
+
+
+
+
+        /* lose modal -------------------------------------------------------------- */
+        #LoseModal .modal-content {
+            display: flex;
+            align-items: center;
+            background-image: url("images/victor-elon.jpg");
+            background-size: cover;
+            background-position: top;
+        }
+
+        #LoseModal .bubble {
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            top: 159px;
+            right: 150px;
+
+            @media (max-width: 1400px) {
+                top: 110px;
+                right: 80px;
+            }
+
+            @media (max-width: 1200px) {
+                top: 60px;
+                right: 0;
+            }
+        }
+
+        #LoseModal .text {
+            position: absolute;
+            right: 210px;
+            top: 264px;
+            width: 366px;
+            font-size: 18px;
+            font-family: monospace;
+            font-weight: 700;
+            overflow: hidden;
+            border-right: 0.15em solid orange;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation:
+                    typinglose 3.5s steps(40, end),
+                    blink-caretlose .75s step-end infinite;
+
+            @media (max-width: 1400px) {
+                top: 220px;
+                right: 135px;
+            }
+
+            @media (max-width: 1200px) {
+                top: 170px;
+                right: 55px;
+            }
+        }
+
+        /* The typing effect */
+        @keyframes typinglose {
+            from { width: 0 }
+            to { width: 20% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caretlose {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        #LoseModal .modal-header {
+            border: none;
+        }
+
+        #LoseModal .btn-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #LoseModal .modal-body {
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #LoseModal .modal-footer {
+            border: none !important;
+        }
+
+
+        #modalCover {
+            display: none;
+            width: 100vw;
+            height: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 8943;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="game">
+    <canvas id="gameCanvas"></canvas>
+</div>
+
+<div id="modalCover"></div>
+
+<!-- Win Modal -->
+<div class="modal fade" id="WinModal" tabindex="-1" aria-labelledby="exampleWinModal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content-win">
+            <div class="modal-header-win">
+                <button type="button" class="btn-close win d-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h1>You Win!!!</h1>
+            </div>
+            <div class="modal-body-win">
+            </div>
+            <div class="modal-footer-win">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Lose Modal -->
+<div class="modal fade" id="LoseModal" tabindex="-1" aria-labelledby="exampleModallLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <img class="bubble" src="images/text-bubble.png">
+            <div class="text">You will never defeat me!!!</div>
+            <div class="modal-header-lose">
+                <button type="button" class="btn-close d-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img class="logo" src="images/splash-logo.jpg" alt="image/splash-logo.jpg">
+                <div class="description">
+                    Welcome to Hell Space LTD. Where space doesn't exist unless you catapult your way there.
+                    The planet has become overpopulated and we must escape. Our only option is to use the last tool left
+                    on earth...
+                    A catapult from 450 B.C. Left-click and hold to charge the catapult. Let go to release the catapult.
+                    Aim the character with the cursor. Fling the characters at the tower or enemies. Try to build the
+                    tower to the white line to progress.
+                    Make it all the way to Mars and defeat Elon to win the game.
+                    Good Luck!
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a type="button" data-bs-dismiss="modal">
+                    <img class="playbutton" src="images/playbutton.png" alt="playbutton.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.61.0-beta.1/dist/phaser.min.js"></script>
+  <script type="application/javascript" src="/js/game-helpers.js"></script>
+  <script type="application/javascript" src="/js/character.js"></script>
+  <script type="application/javascript" src="/js/level.js"></script>
+  <script type="application/javascript" src="/js/health-bar.js"></script>
+  <script type="application/javascript" src="/js/laser.js"></script>
+  <script type="application/javascript" src="/js/enemy.js"></script>
+  <script type="application/javascript" src="/js/power-bar.js"></script>
+  <script type="application/javascript" src="/js/catapult.js"></script>
+  <script type="application/javascript" src="/js/game-logic.js"></script>
+  <script type="application/javascript" src="/js/game.js"></script>
+  <script type="text/javascript">
+    window.onload = () => {
+      const myModal = new bootstrap.Modal('#exampleModal');
+      myModal.show();
+    }
+
+    function showModalCover() {
+        const modalCover = document.getElementById('modalCover');
+        modalCover.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

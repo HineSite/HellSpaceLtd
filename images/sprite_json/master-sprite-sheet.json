@@ -1,0 +1,230 @@
+{
+	"textures": [
+		{
+			"image": "master-sprite-sheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1301,
+				"h": 904
+			},
+			"scale": 0.9375,
+			"frames": [
+				{
+					"filename": "pink-gma-climb_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 281,
+						"h": 450
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 281,
+						"h": 450
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 281,
+						"h": 450
+					}
+				},
+				{
+					"filename": "purple-gma-climb_02.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 281,
+						"h": 450
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 281,
+						"h": 450
+					},
+					"frame": {
+						"x": 1,
+						"y": 453,
+						"w": 281,
+						"h": 450
+					}
+				},
+				{
+					"filename": "pink-gma-climb_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 281,
+						"h": 450
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 274,
+						"h": 450
+					},
+					"frame": {
+						"x": 284,
+						"y": 1,
+						"w": 274,
+						"h": 450
+					}
+				},
+				{
+					"filename": "pink-gma-climb_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 281,
+						"h": 450
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 274,
+						"h": 450
+					},
+					"frame": {
+						"x": 284,
+						"y": 453,
+						"w": 274,
+						"h": 450
+					}
+				},
+				{
+					"filename": "purple-gma-climb_01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 281,
+						"h": 450
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 274,
+						"h": 450
+					},
+					"frame": {
+						"x": 560,
+						"y": 1,
+						"w": 274,
+						"h": 450
+					}
+				},
+				{
+					"filename": "purple-gma-climb_03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 281,
+						"h": 450
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 274,
+						"h": 450
+					},
+					"frame": {
+						"x": 560,
+						"y": 453,
+						"w": 274,
+						"h": 450
+					}
+				},
+				{
+					"filename": "pink-gma-idle.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 281,
+						"h": 450
+					},
+					"spriteSourceSize": {
+						"x": 42,
+						"y": 33,
+						"w": 181,
+						"h": 417
+					},
+					"frame": {
+						"x": 836,
+						"y": 1,
+						"w": 181,
+						"h": 417
+					}
+				},
+				{
+					"filename": "purple-gma-idle.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 281,
+						"h": 450
+					},
+					"spriteSourceSize": {
+						"x": 42,
+						"y": 33,
+						"w": 181,
+						"h": 417
+					},
+					"frame": {
+						"x": 836,
+						"y": 420,
+						"w": 181,
+						"h": 417
+					}
+				},
+				{
+					"filename": "pink-gma-fall.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 281,
+						"h": 450
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 73,
+						"w": 281,
+						"h": 303
+					},
+					"frame": {
+						"x": 1019,
+						"y": 1,
+						"w": 281,
+						"h": 303
+					}
+				},
+				{
+					"filename": "purple-gma-fall.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 281,
+						"h": 450
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 73,
+						"w": 281,
+						"h": 303
+					},
+					"frame": {
+						"x": 1019,
+						"y": 306,
+						"w": 281,
+						"h": 303
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:fec73cb01b561a6f17453f9a28063f86:4bf716fd678137fd332306f281815d9e:5acfd35602aa5a9699809130c84c32ee$"
+	}
+}
